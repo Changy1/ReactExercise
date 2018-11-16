@@ -15,8 +15,8 @@ class TodoItem extends Component {
             isUpdate: !this.state.isUpdate
         })
         if( !this.state.isUpdate ) {
-            setTimeout( () => {
-                this.refs.input.focus()
+            setTimeout( () => {             //这里因为setState是异步的， 所以还没有出来input所以无法给他自动获取焦点
+                this.refs.input.focus()     //需要使用setTimeout(0)
             })
         }
     }
