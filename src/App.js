@@ -4,7 +4,8 @@ import React , { Component } from 'react';
 /* import Combination from './combination/combination' */
 /* import ContextExample from './context/ContextExample' */
 /* import PopFather from './pop-up/father' */
-import {Brother , Sister } from './bus/Mybus'
+/* import {Brother , Sister } from './bus/Mybus' */
+import Running from './lifecycle/main'
 
 class App extends Component {
   render() {
@@ -15,8 +16,9 @@ class App extends Component {
       {/* <Combination /> */}
       {/* <ContextExample /> */}
       {/* <PopFather /> */}
-      <Brother />
-      <Sister />
+      {/* <Brother />
+      <Sister /> */}
+      <Running />
       </div>
     );
   }
