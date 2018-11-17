@@ -7,6 +7,7 @@ class Brother extends Component {
         this.state = {
             money: 20
         }
+        //给bus一个事件，当这个事件执行的时候就执行changeMoney这个事件
         bus.on('money',() => {
             this.changeMoney()
         })
@@ -25,13 +26,14 @@ class Brother extends Component {
 
 
 class Sister extends Component {
+    //当点击的时候触发button，button调用bus的money事件
     button () {
         bus.emit('money')
     }
     render () {
         return (
             <div>
-                <button onClick = {this.button}></button>
+                <button onClick = { this.button } ></button>
             </div>
         )
     }
