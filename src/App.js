@@ -6,7 +6,8 @@ import React , { Component } from 'react';
 /* import PopFather from './pop-up/father' */
 /* import {Brother , Sister } from './bus/Mybus' */
 /* import Running from './lifecycle/main' */
-import HocExanple from './HOC/HOCexample' 
+/* import HocExanple from './HOC/HOCexample'  */
+import PropTypes from './prop-types/main'
 
 class App extends Component {
   render() {
@@ -20,7 +21,8 @@ class App extends Component {
       {/* <Brother />
       <Sister /> */}
       {/* <Running /> */}
-      <HocExanple />
+      {/* <HocExanple /> */}
+      <PropTypes />
       </div>
     );
   }
