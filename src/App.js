@@ -5,7 +5,8 @@ import React , { Component } from 'react';
 /* import ContextExample from './context/ContextExample' */
 /* import PopFather from './pop-up/father' */
 /* import {Brother , Sister } from './bus/Mybus' */
-import Running from './lifecycle/main'
+/* import Running from './lifecycle/main' */
+import HocExanple from './HOC/HOCexample' 
 
 class App extends Component {
   render() {
@@ -18,7 +19,8 @@ class App extends Component {
       {/* <PopFather /> */}
       {/* <Brother />
       <Sister /> */}
-      <Running />
+      {/* <Running /> */}
+      <HocExanple />
       </div>
     );
   }
