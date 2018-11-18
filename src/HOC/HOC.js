@@ -17,11 +17,11 @@ const higherOrderComponent = (UIComponent, handler) => {
         componentDidMount () {
             Datasource.addChangeListener(this.handleChange)
         }
-        componentWillUnmount() {
-            Datasource.removeChangeListener(this.handleChange)
-        }
         handleChange () {
             this.setState({ lists: handler() })
+        }
+        componentWillUnmount() {
+            Datasource.removeChangeListener(this.handleChange)
         }
         render() {
             //将lists作为props传入
