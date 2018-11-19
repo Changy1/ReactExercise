@@ -7,7 +7,8 @@ import React , { Component } from 'react';
 /* import {Brother , Sister } from './bus/Mybus' */
 /* import Running from './lifecycle/main' */
 /* import HocExanple from './HOC/HOCexample'  */
-import PropTypes from './prop-types/main'
+/* import PropTypes from './prop-types/main' */
+import StyledComponent from './styledComponent'
 
 class App extends Component {
   render() {
@@ -22,7 +23,8 @@ class App extends Component {
       <Sister /> */}
       {/* <Running /> */}
       {/* <HocExanple /> */}
-      <PropTypes />
+      {/* <PropTypes /> */}
+      <StyledComponent />
       </div>
     );
   }
