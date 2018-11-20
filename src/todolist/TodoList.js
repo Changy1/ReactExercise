@@ -8,13 +8,12 @@ class TodoList extends Component {
         //接收属性
         super(props)
         //定义状态
+        //state就是一个对象
         this.state = {
-            id: 2,
+            // 这里state的id第一次获取之后已经有了，然后每次都会给id+1，其实就已经跟远程id没关系了，每次都在state基础上加
+            id: store.getState().id,
             _todos: store.getState().todos,
-            types: [
-                { id: 1, title: '未完成', type: false},
-                { id: 2, title: '已完成', type: true}
-            ]
+            types: store.getState().types
         }
     }
     componentWillMount () {
@@ -56,7 +55,7 @@ class TodoList extends Component {
         if ( e.keyCode === 13 ) {
             let title = e.target.value
             let obj = {
-                id: ++ this.state.id ,
+                id: ++ this.state.id,
                 title,
                 isFinished: false
             }
