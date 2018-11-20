@@ -1,7 +1,7 @@
 import { defaultState } from './default-state'
 import { COUNT_ADDONE, COUNT_ADDOTHER } from './actionTypes'
 const reducer = (previousState = defaultState, action) => {
-    let newObj = Object.assign( {}, previousState )
+    let newObj = Object.assign( {}, previousState ) //这里是应该是count的值
     switch( action.type ){
         case COUNT_ADDONE:
         newObj.count ++;
@@ -13,7 +13,7 @@ const reducer = (previousState = defaultState, action) => {
 
         default: break;
     }
-    return newObj
+    return newObj       //之前state就等于这个newObj，但是现在分模块以后这里返回的就是state的count的值
 }
 
 export default reducer

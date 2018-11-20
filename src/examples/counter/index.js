@@ -9,14 +9,16 @@ class Counter extends Component {
     constructor () {
         super()
         this.state = {
-            count: store.getState().count
+            count: store.getState().count.count,
+            message: store.getState().message.message
         }
         this.addone = this.addone.bind(this)
     }
     componentWillMount() {
+        console.log(this.state.message)
         // subscribe会返回一个函数，返回的函数执行可以注销这个监听器
         let unlistener = store.subscribe(() => {
-            this.setState({ count: store.getState().count })
+            this.setState({ count: store.getState().count.count })
         })
         /* setTimeout( () => {
             // 这样写可以注销这个监听器
@@ -44,6 +46,7 @@ class Counter extends Component {
     }
     addone = () => {
         store.dispatch(actionCreators.addone())
+        console.log(this.state.message)
     }
 }
 
