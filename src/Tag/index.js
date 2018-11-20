@@ -33,3 +33,23 @@ export const OwnNavLink = props => {
         <Item {...props} nav />
     )
 }
+
+export const ActiveNavLink = styled(NavLink)`
+    &.active {
+        color: tomato;
+    }
+    &.selected {
+        color: blue;
+    }
+    color: #333;
+`
+
+export const ActiveOwnNavLink = styled(OwnNavLink)`
+    &.active {
+        color: tomato;
+    }
+    &.selected {
+        color: blue;
+    }
+    color: #333;
+`
